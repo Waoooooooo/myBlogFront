@@ -8,7 +8,6 @@ import { ConfigProvider, Divider, Input } from "antd"
 import Search from "antd/es/input/Search"
 
 function Header() {
-
   const counter = useSelector<{ counter: { value: number } }>(state => state.counter)
   const nickname = useSelector<userState>(state => state.user.nickname)
   const id = useSelector<userState>(state => state.user.id)
