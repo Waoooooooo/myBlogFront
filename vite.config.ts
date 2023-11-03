@@ -4,4 +4,18 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  css: {
+    // 预处理器配置项
+    preprocessorOptions: {
+      less: {
+        math: "always",
+      },
+    },
+  },
+  server: {
+    proxy: {
+      '/api':  'http://127.0.0.1:10086'
+    }
+  }
+
 })

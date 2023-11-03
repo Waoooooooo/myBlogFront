@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: space-around;
+  border-bottom: 1px solid #efefef;
+  padding: 0 20%;
+  .ant-input-group-wrapper{
+    width: 300px;
+  }
+}
+
+
+b {
+  color: #e06f6f;
+  font-size: larger;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    text-decoration: none;
+    color: #333;
+
+    line-height: 1.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+    // display: inline-block;
+    color: #666;
+    position: relative;
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before {
+      content: " ";
+      position: absolute;
+      background-color: #E68D8D;
+      visibility: hidden;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transform-origin: bottom;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      color: #060606;
+      &::before {
+        visibility: visible;
+        transition: 0.3s;
+        transform: scaleY(4);
+      }
+    }
+
+  }
+}
+
+//svg动画
+svg {
+  path.s0 {
+    fill: none;
+    stroke: #e06f6f;
+    stroke-width: 40;
+    stroke-dasharray: 800, 800;
+    stroke-dashoffset: 0;
+    animation: flow1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  path.s1 {
+    fill: none;
+    stroke: #e06f6f;
+    stroke-width: 122;
+    stroke-dasharray: 800, 800;
+    stroke-dashoffset: 0;
+    animation: flow2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes flow1 {
+  0% {
+    stroke-dasharray: 0, 100%;
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+
+  50% {
+    stroke-dasharray: 100%, 0;
+    stroke-dashoffset: 100%;
+    fill: #e06f6f
+  }
+
+  100% {
+    stroke-dasharray: 0, 100%;
+    stroke-dashoffset: 200%;
+    fill: white;
+  }
+}
+
+
+@keyframes flow2 {
+  0% {
+    stroke-dasharray: 0, 100%;
+    stroke-dashoffset: 0;
+  }
+
+  35% {
+    stroke-dasharray: 100%, 0;
+    stroke-dashoffset: 100%;
+  }
+
+  65% {
+    stroke-dasharray: 100%, 0;
+    stroke-dashoffset: 100%;
+  }
+
+  100% {
+    stroke-dasharray: 0, 100%;
+    stroke-dashoffset: 200%;
+  }
+}

@@ -6,7 +6,7 @@ import App from './App.tsx'
 export default   createHashRouter([
   {
     path: "/",
-    element:( <>首页<App/></>),
+    element:( <><App/></>),
   },
   {
     path: "/register",
